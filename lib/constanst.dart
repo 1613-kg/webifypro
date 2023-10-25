@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 
 getHeight(BuildContext context) {
@@ -10,7 +11,11 @@ getWidth(BuildContext context) {
 
 Widget genButton(String text, Function() onclick) {
   return ElevatedButton(
-    child: Text(text),
+    child: FittedBox(
+        child: AutoSizeText(
+      text,
+      minFontSize: 10,
+    )),
     onPressed: onclick,
     style: ElevatedButton.styleFrom(shape: LinearBorder()),
   );

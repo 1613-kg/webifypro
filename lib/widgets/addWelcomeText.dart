@@ -10,27 +10,35 @@ class addWelcomeText extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        Text(
-          "Hello",
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            fontSize: 60,
-            color: MyColors.blue4,
+      children: [
+        Container(
+          child: FittedBox(
+            child: Text(
+              "Hello",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 60,
+                color: MyColors.blue4,
+              ),
+            ),
           ),
         ),
-        RichText(
-          text: TextSpan(
-              text: "WELCOME TO",
-              style: TextStyle(fontSize: 60, color: MyColors.blue4),
-              children: [
-                TextSpan(
-                    text: "WEBIFYPRO",
-                    style: TextStyle(
-                        fontSize: 60,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black54))
-              ]),
+        Container(
+          child: FittedBox(
+            child: RichText(
+              text: TextSpan(
+                  text: "WELCOME TO",
+                  style: TextStyle(fontSize: 60, color: MyColors.blue4),
+                  children: [
+                    TextSpan(
+                        text: "WEBIFYPRO",
+                        style: TextStyle(
+                            fontSize: 60,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black54))
+                  ]),
+            ),
+          ),
         ),
       ],
     );

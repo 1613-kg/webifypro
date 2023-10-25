@@ -10,7 +10,7 @@ class addHomeImage extends StatelessWidget {
       elevation: 5,
       child: Container(
         height: 600,
-        width: 600,
+        width: MediaQuery.of(context).size.width / 3,
         child: Image.asset(
           "assets/images/home.jpg",
           fit: BoxFit.cover,
